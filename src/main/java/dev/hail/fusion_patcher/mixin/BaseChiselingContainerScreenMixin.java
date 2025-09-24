@@ -95,7 +95,7 @@ public abstract class BaseChiselingContainerScreenMixin <T extends BaseChiseling
         this.chiselAllWidget = this.addWidget(new ChiselAllWidget(127, 99, 19, 21, () -> this.container.currentEntry, this::chiselAll));
     }
 
-    @Inject(method = "getEntry", at = @At("RETURN"), locals = LocalCapture.CAPTURE_FAILHARD)
+    @Inject(method = "getEntry", at = @At("RETURN"), locals = LocalCapture.CAPTURE_FAILHARD, remap = false)
     private void injectedScrollReset(int index, CallbackInfoReturnable<T> ci, ChiselingRecipe recipe) {
         if (recipe == null){
             fusionPatcher$entryScroll = 0;

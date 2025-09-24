@@ -10,22 +10,30 @@ logoFile = "icon.png"
 authors="${mod_authors}"
 description='''${mod_description}'''
 
-[[mixins]]
-config="${mod_id}.mixins.json"
-
-[[accessTransformers]]
-file="META-INF/accesstransformer.cfg"
-
 [[dependencies.${mod_id}]]
-    modId="neoforge"
-    type="required"
-    versionRange="[${neo_version},)"
+    modId="forge"
+    mandatory=true
+    versionRange="${forge_version_range}"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.${mod_id}]]
     modId="minecraft"
-    type="required"
+    mandatory=true
     versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="fusion"
+    mandatory=false
+    versionRange="[1.2.0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="rechiseled"
+    mandatory=false
+    versionRange="[1.1.0,)"
     ordering="NONE"
     side="BOTH"
