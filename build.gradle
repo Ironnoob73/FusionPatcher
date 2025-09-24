@@ -42,8 +42,8 @@ neoForge {
     runs {
         client {
             client()
-
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+            systemProperty 'mixin.debug', 'true'
         }
 
         server {
@@ -83,6 +83,9 @@ configurations {
 
 dependencies {
     implementation "curse.maven:fusion-connected-textures-854949:6923714"
+    implementation "curse.maven:rechiseled-558998:5663514"
+    implementation "curse.maven:supermartijn642s-config-lib-438332:5546996"
+    implementation "curse.maven:supermartijn642s-core-lib-454372:5634367"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
