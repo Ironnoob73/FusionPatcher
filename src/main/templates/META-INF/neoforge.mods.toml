@@ -7,6 +7,7 @@ issueTrackerURL="https://github.com/Ironnoob73/FusionPatcher/issues"
 modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
+displayURL="https://github.com/Ironnoob73/FusionPatcher"
 logoFile = "icon.png"
 authors="${mod_authors}"
 description='''${mod_description}'''
