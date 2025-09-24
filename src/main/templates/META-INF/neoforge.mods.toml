@@ -29,3 +29,17 @@ file="META-INF/accesstransformer.cfg"
     versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="fusion"
+    type="optional"
+    versionRange="[1.2.0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="rechiseled"
+    type="optional"
+    versionRange="[1.1.0,)"
+    ordering="NONE"
+    side="BOTH"
