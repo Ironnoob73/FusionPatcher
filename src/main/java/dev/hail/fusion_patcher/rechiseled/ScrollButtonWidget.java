@@ -4,7 +4,6 @@ import com.supermartijn642.core.TextComponents;
 import com.supermartijn642.core.gui.ScreenUtils;
 import com.supermartijn642.core.gui.widget.WidgetRenderContext;
 import com.supermartijn642.core.gui.widget.premade.AbstractButtonWidget;
-import net.minecraft.component.Component;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 

@@ -7,7 +7,7 @@ version = project.mod_version
 group = project.maven_group
 
 base {
-	archivesName = project.archives_base_name + "-1.21.1-fabric"
+	archivesName = project.archives_base_name + "-1.20.1-fabric"
 }
 
 repositories {
@@ -30,10 +30,10 @@ dependencies {
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	modImplementation "curse.maven:fusion-connected-textures-854949:6916613"
-	modImplementation "curse.maven:rechiseled-558998:5663507"
-	modImplementation "curse.maven:supermartijn642s-core-lib-454372:6076743"
-	modImplementation "curse.maven:supermartijn642s-config-lib-438332:5546988"
+	modImplementation "curse.maven:fusion-connected-textures-854949:6916601"
+	modImplementation "curse.maven:rechiseled-558998:5286340"
+	modImplementation "curse.maven:supermartijn642s-core-lib-454372:6076732"
+	modImplementation "curse.maven:supermartijn642s-config-lib-438332:4785838"
 }
 
 processResources {
@@ -45,14 +45,14 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.release = 21
+	it.options.release = 17
 }
 
 java {
 	withSourcesJar()
 
-	sourceCompatibility = JavaVersion.VERSION_21
-	targetCompatibility = JavaVersion.VERSION_21
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
 }
 
 jar {
