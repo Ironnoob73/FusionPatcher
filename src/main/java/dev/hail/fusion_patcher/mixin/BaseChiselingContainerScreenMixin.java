@@ -1,7 +1,6 @@
 package dev.hail.fusion_patcher.mixin;
 
 import com.supermartijn642.core.gui.widget.BaseContainerWidget;
-import com.supermartijn642.core.gui.widget.Widget;
 import com.supermartijn642.rechiseled.Rechiseled;
 import com.supermartijn642.rechiseled.chiseling.ChiselingEntry;
 import com.supermartijn642.rechiseled.chiseling.ChiselingRecipe;
@@ -11,13 +10,13 @@ import com.supermartijn642.rechiseled.packet.PacketToggleConnecting;
 import com.supermartijn642.rechiseled.screen.*;
 import dev.hail.fusion_patcher.FusionPatcher;
 import dev.hail.fusion_patcher.rechiseled.ScrollButtonWidget;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
-import org.spongepowered.asm.mixin.injection.*;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
@@ -95,7 +94,7 @@ public abstract class BaseChiselingContainerScreenMixin <T extends BaseChiseling
         this.chiselAllWidget = this.addWidget(new ChiselAllWidget(127, 99, 19, 21, () -> this.container.currentEntry, this::chiselAll));
     }
 
-    @Inject(method = "getEntry", at = @At("RETURN"), locals = LocalCapture.CAPTURE_FAILHARD)
+    @Inject(method = "getEntry", at = @At("RETURN"), locals = LocalCapture.CAPTURE_FAILHARD, remap = false)
     private void injectedScrollReset(int index, CallbackInfoReturnable<T> ci, ChiselingRecipe recipe) {
         if (recipe == null){
             fusionPatcher$entryScroll = 0;

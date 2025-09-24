@@ -4,11 +4,12 @@ import com.supermartijn642.core.TextComponents;
 import com.supermartijn642.core.gui.ScreenUtils;
 import com.supermartijn642.core.gui.widget.WidgetRenderContext;
 import com.supermartijn642.core.gui.widget.premade.AbstractButtonWidget;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.component.Component;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 
 public class ScrollButtonWidget extends AbstractButtonWidget {
-    private static final ResourceLocation GREY_BUTTONS = ResourceLocation.fromNamespaceAndPath("fusion_patcher", "textures/gui/scroll_buttons.png");
+    private static final Identifier GREY_BUTTONS = Identifier.of("fusion_patcher", "textures/gui/scroll_buttons.png");
     private final boolean up;
     public ScrollButtonWidget(int x, int y, int width, int height, boolean up, Runnable onPress) {
         super(x, y, width, height, onPress);
@@ -16,7 +17,7 @@ public class ScrollButtonWidget extends AbstractButtonWidget {
     }
 
     @Override
-    public Component getNarrationMessage() {
+    public Text getNarrationMessage() {
         return TextComponents.translation("rechiseled.chiseling.preview").get();
     }
 

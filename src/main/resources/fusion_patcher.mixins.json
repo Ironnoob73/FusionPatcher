@@ -2,7 +2,6 @@
   "required": true,
   "package": "dev.hail.fusion_patcher.mixin",
   "compatibilityLevel": "JAVA_21",
-  "minVersion": "0.8",
   "client": [
   ],
   "mixins": [

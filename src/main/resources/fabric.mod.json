@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "fusion_patcher",
+	"version": "${version}",
+	"name": "Fusion Patcher",
+	"description": "This mod only does two thing:\\n* Increase Fusion's continuous texture's max size to 16.\\n* Add Scroll Buttons to Rechiseled chisel's screen.",
+	"authors": [
+		"LD_Anvil"
+	],
+	"contact": {
+		"sources": "https://github.com/Ironnoob73/FusionPatcher"
+	},
+	"license": "MIT",
+	"icon": "icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.hail.fusion_patcher.FusionPatcher"
+		]
+	},
+	"mixins": [
+		"fusion_patcher.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"fusion": ">=1.2.0",
+		"rechiseled": ">=1.1.0"
+	}
+}
