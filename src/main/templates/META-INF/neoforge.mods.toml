@@ -1,6 +1,7 @@
 modLoader="javafml"
 loaderVersion="${loader_version_range}"
 license="${mod_license}"
+issueTrackerURL="https://github.com/Ironnoob73/FusionPatcher/issues"
 
 [[mods]]
 modId="${mod_id}"
