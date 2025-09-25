@@ -8,7 +8,6 @@ import com.supermartijn642.rechiseled.packet.PacketChiselAll;
 import com.supermartijn642.rechiseled.packet.PacketSelectEntry;
 import com.supermartijn642.rechiseled.packet.PacketToggleConnecting;
 import com.supermartijn642.rechiseled.screen.*;
-import dev.hail.fusion_patcher.FusionPatcher;
 import dev.hail.fusion_patcher.rechiseled.ScrollButtonWidget;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -106,7 +105,6 @@ public abstract class BaseChiselingContainerScreenMixin <T extends BaseChiseling
     @Unique
     private void fusionPatcher$scroll(boolean up){
         ChiselingRecipe recipe = container.currentRecipe;
-        FusionPatcher.LOGGER.debug(String.valueOf(fusionPatcher$entryScroll));
         if (recipe != null){
             if (up){
                 if (fusionPatcher$entryScroll > 0){

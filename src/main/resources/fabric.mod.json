@@ -13,18 +13,13 @@
 	"license": "MIT",
 	"icon": "icon.png",
 	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"dev.hail.fusion_patcher.FusionPatcher"
-		]
-	},
 	"mixins": [
 		"fusion_patcher.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.17.2",
-		"minecraft": "~1.20.1",
-		"java": ">=17"
+		"minecraft": ">=1.14",
+		"java": ">=8"
 	},
 	"suggests": {
 		"fusion": ">=1.2.0",
