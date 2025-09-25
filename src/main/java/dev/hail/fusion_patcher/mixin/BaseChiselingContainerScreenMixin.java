@@ -1,7 +1,6 @@
 package dev.hail.fusion_patcher.mixin;
 
 import com.supermartijn642.core.gui.widget.BaseContainerWidget;
-import com.supermartijn642.core.gui.widget.Widget;
 import com.supermartijn642.rechiseled.Rechiseled;
 import com.supermartijn642.rechiseled.chiseling.ChiselingEntry;
 import com.supermartijn642.rechiseled.chiseling.ChiselingRecipe;
@@ -9,15 +8,14 @@ import com.supermartijn642.rechiseled.packet.PacketChiselAll;
 import com.supermartijn642.rechiseled.packet.PacketSelectEntry;
 import com.supermartijn642.rechiseled.packet.PacketToggleConnecting;
 import com.supermartijn642.rechiseled.screen.*;
-import dev.hail.fusion_patcher.FusionPatcher;
 import dev.hail.fusion_patcher.rechiseled.ScrollButtonWidget;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
-import org.spongepowered.asm.mixin.injection.*;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
@@ -107,7 +105,6 @@ public abstract class BaseChiselingContainerScreenMixin <T extends BaseChiseling
     @Unique
     private void fusionPatcher$scroll(boolean up){
         ChiselingRecipe recipe = container.currentRecipe;
-        FusionPatcher.LOGGER.debug(String.valueOf(fusionPatcher$entryScroll));
         if (recipe != null){
             if (up){
                 if (fusionPatcher$entryScroll > 0){
